@@ -1,0 +1,15 @@
+  <div class="container"> 
+        EmpName:<input type="text" ng-model="contact.name" required:"true"><br><br>
+        Address:<input type="text" ng-model="contact.address" required:"true"><br><br>
+        EmailID:<input type="email" ng-model="contact.email" required:"true" ><br><br>
+        Select Department:
+  <select ng-model="contact.dept">
+    <option value="">
+    <option value="Java">Java
+    <option value="C#">C#
+    <option value="UI">UI
+  </select><br><br>
+        CellNo:<input type="text" ng-model="contact.number" required:"true"><br><br>        
+        <label for="DateOfBirh:">BirthDate : </label><input ng-model="contact.dob" id="DateOfBirth" type="date" value="1980-01-01"/><br><br>
+         <button  ng-click="addContact()">Save Contact</button> 
+</div>

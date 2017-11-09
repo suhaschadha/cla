@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html>  
+<html ng-app="myApp">  
+<head>  
+    <title>NG Grid</title>  
+  --><!-- <script>
+function load() {
+  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("ht").innerHTML =this.responseText;
+    }
+  };
+  xhttp.open("GET", "AddEmp.html", true);
+  xhttp.send();
+} 
+</script> -->
+  
+    <div>  
+        <lable><b>Employee Details</b></lable>  
+      
+    <div id="grid" style="display: true;" class="gridStyle" ng-grid="gridOptions" >   </div> <br><br>
+     <div id="ht">
+      <lable>Name: </lable><input type="text" ng-model="contact.name">
+      <lable>Email: </lable>   <input type="email" ng-model="contact.email">
+       <lable>Number: </lable>   <input type="text" ng-model="contact.number">
+       <lable>Dept: </lable>   <select ng-model="contact.dept" ng-options="opt as opt for opt in options"/>
+       <lable>Address: </lable>   <input type="text" ng-model="contact.address">
+       <lable>DOB: </lable>   <input type="date" ng-model="contact.dob"  value="{{ contact.dob | date: 'yyyy-MM-dd' }}" ><br/><br/>
+       <button ng-click="update(contact._id,contact)">Save Changes</button> </br>
+         
+       <a href="#/newEmp"><button>New Employee</button></a>
+        <!-- <button>Add New Employee</button> -->
+         </div>
+</div>
+
